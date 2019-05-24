@@ -10,7 +10,7 @@ class snyc_mysql{
     public $dbConfig;
     public function __construct()
     {
-        $this->dbSource = new Swoole\Mysql;
+        $this->dbSource = new Swoole\MySQL;
         $this->dbConfig = [
             'host' => '127.0.0.1',
             'port' => 3306,

@@ -12,6 +12,7 @@
     var websocket = new WebSocket(wsUrl);
 
     websocket.onopen = function(evt) {
+        websocket.send('hello-ityun');
       console.log('connected-websocket-success');
     };
 

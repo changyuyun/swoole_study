@@ -33,17 +33,20 @@ class snyc_mysql{
 
     public function execute($id, $username)
     {
-           $result = $this->dbSource->connect($this->dbConfig);
-           if($result === false){
-               return false;
-           }
+        go(function (){
+            $result = $this->dbSource->connect($this->dbConfig);
+            if($result === false){
+                return false;
+            }
 
-           $sql = "select * from test";
-           $ret = $this->dbSource->query($sql);
-           if($ret === false){
-               return ;
-           }
-           var_dump($ret);
+            $sql = "select * from test";
+            $ret = $this->dbSource->query($sql);
+            if($ret === false){
+                return ;
+            }
+            var_dump($ret);
+        });
+
     }
 }
 

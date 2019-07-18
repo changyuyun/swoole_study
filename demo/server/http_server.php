@@ -1,6 +1,6 @@
 <?php
 $http = new swoole_http_server("www.biihu.com.cn", 9501);
-
+//测试部署
 $http->set([
     'enable_static_handler' => true,
     'document_root' => "/home/work/hdtocs/swoole_study/demo/html"

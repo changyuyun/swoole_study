@@ -1,0 +1,24 @@
+<h1>websocket</h1>
+<script>
+    var wsUrl = "ws://180.76.187.5:9502";
+
+    var websocket = new WebSocket(wsUrl);
+
+    websocket.onopen = function(evt) {
+        websocket.send('hello-ityun');
+      console.log('connected-websocket-success');
+    };
+
+    websocket.onmessage = function(evt) {
+        console.log('websocket-server-return-data'+evt.data)
+    };
+
+    websocket.onclose = function(evt) {
+        console.log("close")
+    };
+
+    websocket.onerror = function(evt) {
+        console.log("error")
+    }
+</script>
+
